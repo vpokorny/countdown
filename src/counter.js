@@ -1,9 +1,8 @@
 const { ipcRenderer } = require('electron');
-const separator = ":";
 
-let time = 0;
+let counterTime = 0;
 ipcRenderer.on('action-set-counter', (event, arg) => {
-    time = arg;
+    counterTime = arg;
 })
 
 function addLeadingZero(number) {
@@ -15,17 +14,18 @@ function addLeadingZero(number) {
 }
 
 function countDown() {
+    const separator = ":";
     setInterval(() => {
-        if (time === 0) {
+        if (counterTime === 0) {
             document.getElementById("counter").innerText = "TIME IS UP";
-        } else if (time > 0) {
-            let hours = addLeadingZero(Math.floor(time / 3600));
-            let mins = addLeadingZero(Math.floor((time % 3600) / 60));
-            let secs = addLeadingZero(Math.floor((time % 3600) % 60));
+        } else if (counterTime > 0) {
+            let hours = addLeadingZero(Math.floor(counterTime / 3600));
+            let mins = addLeadingZero(Math.floor((counterTime % 3600) / 60));
+            let secs = addLeadingZero(Math.floor((counterTime % 3600) % 60));
             document.getElementById("counter").innerText = hours.toString().concat(
                 separator, mins, separator, secs
             );
-            time -= 1;
+            counterTime -= 1;
         } else {
             document.getElementById("counter").innerText = "Chill :-).";
         }

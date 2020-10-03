@@ -5,13 +5,14 @@ body {
   padding: 2rem;
 }
 
-#container {
+#view {
   height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 3px solid grey;
   background: black;
+  margin: 10px;
 }
 
 #counterView {
