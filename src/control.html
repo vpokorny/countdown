@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="control.css">
+    <script defer src="control.js"></script>
+  </head>
+  <body>
+    <h1>Control panel for countdown</h1>
+    <hr>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="hours">Hours:</label>
+      </div>
+      <input type="number" class="form-control" id="hours" name="hours" min="0" max="23">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="minutes">Minutes:</label>
+      </div>
+      <input type="number" class="form-control" id="minutes" name="minutes" min="0" max="59">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="seconds">Seconds:</label>
+      </div>
+      <input type="number" class="form-control" id="seconds" name="seconds" min="0" max="59">
+    </div>
+
+    <button id="startBtn" class="btn btn-primary">Start</button>
+    <button id="stopBtn" class="btn btn-danger">Stop</button>
+    <button id="chillBtn" class="btn btn-success">Chill</button>
+
+    <div id="view">
+      <p id="counterView"></p>
+    </div>
+  </body>
+</html>
