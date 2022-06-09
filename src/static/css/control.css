@@ -15,7 +15,7 @@ body {
   margin: 10px;
 }
 
-#counterView {
+#counterControl {
   color: grey;
   white-space: nowrap;
 }

@@ -11,7 +11,7 @@ body {
   border: 3px solid grey;
 }
 
-#counter {
+#counterShow {
   font-size: 20rem;
   white-space: nowrap;
   color: grey;

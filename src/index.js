@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, nativeTheme } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -10,16 +10,16 @@ let controlWindow;
 let counterWindow;
 
 const createWindow = () => {
-  // Create the browser window.
+  // Create the window for countdown control panel
   controlWindow = new BrowserWindow({
-    width: 800,
+    width: 1000,
     height: 600,
     webPreferences: {
       nodeIntegration: true,
     }
   });
 
-
+  // Create the window for countdown showtime
   counterWindow = new BrowserWindow({
     width: 1920,
     height: 1080,
@@ -30,15 +30,16 @@ const createWindow = () => {
   });
 
   // and load the control.html of the app.
-  controlWindow.loadFile(path.join(__dirname, 'control.html'));
-  counterWindow.loadFile(path.join(__dirname, 'counter.html'));
+  controlWindow.loadFile(path.join(__dirname, 'templates', 'control.html'));
+  counterWindow.loadFile(path.join(__dirname, 'templates', 'counter.html'));
 
   ipcMain.on('request-set-counter', (event, arg) => {
       counterWindow.webContents.send('action-set-counter', arg);
   });
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools();
+  counterWindow.webContents.openDevTools();
+  controlWindow.webContents.openDevTools();
 
   controlWindow.on('closed', function () {
     app.quit();
