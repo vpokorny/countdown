@@ -45,18 +45,36 @@
     <button id="stopBtn" class="btn btn-danger">Stop</button>
     <button id="chillBtn" class="btn btn-success">Chill</button>
 
-    <button id="addToSeqBtn" class="btn btn-dark">Add</button>
-    <button id="removeFromSeqBtn" class="btn btn-dark">Remove</button>
-
-    <button id="prevSeqBtn" class="btn btn-dark">Prev</button>
-    <button id="startSeqBtn" class="btn btn-primary">Start</button>
-    <button id="nextSeqBtn" class="btn btn-dark">Next</button>
 
     <div id="view">
       <p id="counterControl"></p>
     </div>
-    <div>
-      <p id="sequenceView"></p>
+
+    <hr>
+    <div class="jumbotron-fluid">
+      <button id="addToSeqBtn" class="btn btn-dark">Add</button>
+      <button id="removeFromSeqBtn" class="btn btn-dark">Remove</button>
+    </div>
+
+    <hr>
+    <div class="jumbotron-fluid">
+      <button id="prevSeqBtn" class="btn btn-dark">Prev</button>
+      <button id="startSeqBtn" class="btn btn-primary">Start</button>
+      <button id="nextSeqBtn" class="btn btn-dark">Next</button>
+      <hr>
+      <div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Marker</th>
+              <th scope="col">Duration</th>
+            </tr>
+          </thead>
+          <!-- The content of the table is loaded dynamically -->
+          <tbody id="sequenceView"></tbody>
+        </table>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->

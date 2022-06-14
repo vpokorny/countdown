@@ -47,19 +47,21 @@ function setCounter(document, id, message) {
 
 // Function that visualizes the sequence list
 function setSequence(document, timer) {
-    let res = `[\n`;
+    let res = ``;
     for (let i = 0; i < timer.sequence.length; i++) {
-        res += `${i}. : ${transform2TimeString(timer.sequence[i])}`
-
         // Add arrow pointing to the current index
+        let pointer = ``;
         if (i === timer.index) {
-            res += ` <---\n`;
-        } else {
-            res += `\n`;
+            pointer += `---->`;
         }
+
+        res += `<tr>
+                    <th scope="row">${i}</th>
+                    <td>${pointer}</td>
+                    <td>${transform2TimeString(timer.sequence[i])}</td>
+                </tr>`;
     }
-    res += `]`;
-    document.getElementById(SEQUENCE_ID).innerText = res;
+    document.getElementById(SEQUENCE_ID).innerHTML = res;
 }
 
 // Function that runs each second to update visualized global counter variable (controlTime) value
