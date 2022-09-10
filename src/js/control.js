@@ -66,7 +66,10 @@ chillBtn.onclick = () => {
 const addToSeqBtn = document.getElementById(ADD_TO_SEQ_BUTTON);
 addToSeqBtn.onclick = () => {
     controlTimer.sequence.push(
-        common.transform2Seconds(document)
+        {
+            duration: common.transform2Seconds(document),
+            description: ""
+        }
     );
     console.log(`Adding to the sequence: ${controlTimer.sequence}.`);
     common.setSequence(document, controlTimer);
@@ -89,7 +92,7 @@ const nextSeqBtn = document.getElementById(NEXT_SEQ_BUTTON);
 nextSeqBtn.onclick = () => {
     if ((controlTimer.index + 1) < controlTimer.sequence.length) {
         controlTimer.index++;
-        setTime(controlTimer.sequence[controlTimer.index])
+        setTime(controlTimer.sequence[controlTimer.index].duration)
         common.setSequence(document, controlTimer);
     } else {
         console.log(
@@ -104,7 +107,7 @@ nextSeqBtn.onclick = () => {
 //  - Starts the counter on the current index
 const startSeqBtn = document.getElementById(START_SEQ_BUTTON);
 startSeqBtn.onclick = () => {
-    setTime(controlTimer.sequence[controlTimer.index])
+    setTime(controlTimer.sequence[controlTimer.index].duration)
     common.setSequence(document, controlTimer);
 }
 
@@ -115,7 +118,7 @@ const prevSeqBtn = document.getElementById(PREV_SEQ_BUTTON);
 prevSeqBtn.onclick = () => {
     if ((controlTimer.index - 1) >= 0) {
         controlTimer.index--;
-        setTime(controlTimer.sequence[controlTimer.index]);
+        setTime(controlTimer.sequence[controlTimer.index].duration);
         common.setSequence(document, controlTimer);
     } else {
         console.log(

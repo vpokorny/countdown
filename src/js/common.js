@@ -58,7 +58,8 @@ function setSequence(document, timer) {
         res += `<tr>
                     <th scope="row">${i}</th>
                     <td>${pointer}</td>
-                    <td>${transform2TimeString(timer.sequence[i])}</td>
+                    <td>${transform2TimeString(timer.sequence[i].duration)}</td>
+                    <td>${timer.sequence[i].description}</td>
                 </tr>`;
     }
     document.getElementById(SEQUENCE_ID).innerHTML = res;
