@@ -14,17 +14,15 @@ let controlTimer = {
     sequence: [
         { duration:  600, description: "1.cast - Introduction: 10 min" },
         { duration:  900, description: "1.cast - MC: 15 min" },
-        { duration: 2100, description: "1.cast - 1. speaker: 35 min" },
-        { duration:  600, description: "1.cast - MC: 10 min" },
-        { duration: 2700, description: "1.cast - Panel: 45 min" },
-        { duration:  600, description: "1.cast - MC: 10 min" },
+        { duration: 2400, description: "1.cast - 1. speaker: 40 min" },
+        { duration:  720, description: "1.cast - MC: 12 min" },
+        { duration: 2700, description: "1.cast - 2. speaker: 45 min" },
+        { duration:  720, description: "1.cast - MC: 12 min" },
         { duration:  900, description: "1.cast - Accessories: 15 min" },
 
-        { duration:  600, description: "2.cast - MC: 10 min" },
-        { duration:  900, description: "2.cast - 1. speaker: 15 min" },
-        { duration:  600, description: "2.cast - MC: 10 min" },
-        { duration: 3600, description: "2.cast - Panel: 60 min" },
-        { duration: 1200, description: "2.cast - MC: 20 min" },
+        { duration:  900, description: "2.cast - MC: 15 min" },
+        { duration: 3600, description: "2.cast - Speech: 60 min" },
+        { duration: 2400, description: "2.cast - MC: 40 min" },
         { duration:  300, description: "2.cast - Ending (21%): 5 min" }
     ]
 };
