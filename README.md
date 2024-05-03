@@ -23,6 +23,32 @@ in the fullscreen mode window switched on by `F11` button.
 
 The application is written in electron framework that is based on the javascript. TBD
 
+## Install Node.js on your machine
+
+For windows go to the https://nodejs.org/en/download page and download the Node.js. Follow the installation guide and 
+make sure that at the end you are able to run the following command:
+```shell
+npm --version
+```
+
+## Install dependencies
+
+The next step is to install the dependencies. To do so, navigate to the root directory of this project
+where the `package.json` file is located and run
+```shell
+npm install
+```
+
+> **NOTE:** That this utility has been developed quite a while ago and therefore the dependencies
+> versions are not fully up-to-date.
+
+## Run the contdown
+
+To run the countdown please in the root directory execute:
+```shell
+npm run start
+```
+
 ---
 
 # Contacts
