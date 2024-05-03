@@ -10,7 +10,23 @@ const common = require('../js/common.js');
 let controlTimer = {
     counter: 0,
     index: 0,
-    sequence: []
+    // example: { duration:  600, description: "1.cast - Introduction: 10 min" },
+    sequence: [
+        { duration:  600, description: "1.cast - Introduction: 10 min" },
+        { duration:  900, description: "1.cast - MC: 15 min" },
+        { duration: 2100, description: "1.cast - 1. speaker: 35 min" },
+        { duration:  600, description: "1.cast - MC: 10 min" },
+        { duration: 2700, description: "1.cast - Panel: 45 min" },
+        { duration:  600, description: "1.cast - MC: 10 min" },
+        { duration:  900, description: "1.cast - Accessories: 15 min" },
+
+        { duration:  600, description: "2.cast - MC: 10 min" },
+        { duration:  900, description: "2.cast - 1. speaker: 15 min" },
+        { duration:  600, description: "2.cast - MC: 10 min" },
+        { duration: 3600, description: "2.cast - Panel: 60 min" },
+        { duration: 1200, description: "2.cast - MC: 20 min" },
+        { duration:  300, description: "2.cast - Ending (21%): 5 min" }
+    ]
 };
 
 // Button actions

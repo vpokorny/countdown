@@ -38,8 +38,8 @@ const createWindow = () => {
   });
 
   // Open the DevTools.
-  counterWindow.webContents.openDevTools();
-  controlWindow.webContents.openDevTools();
+  // counterWindow.webContents.openDevTools();
+  // controlWindow.webContents.openDevTools();
 
   controlWindow.on('closed', function () {
     app.quit();
